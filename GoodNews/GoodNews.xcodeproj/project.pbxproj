@@ -13,6 +13,10 @@
 		49725D9128F69AB400352928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49725D9028F69AB400352928 /* Assets.xcassets */; };
 		49725D9428F69AB400352928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49725D9228F69AB400352928 /* LaunchScreen.storyboard */; };
 		49725D9D28F69B1B00352928 /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49725D9C28F69B1B00352928 /* NewsListTableViewController.swift */; };
+		49725DA028FE67A300352928 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49725D9F28FE67A300352928 /* WebService.swift */; };
+		49725DA328FE69F600352928 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49725DA228FE69F600352928 /* Article.swift */; };
+		49DAB18128FE70F700301CA3 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DAB18028FE70F700301CA3 /* ArticleViewModel.swift */; };
+		49DAB18428FE733C00301CA3 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DAB18328FE733C00301CA3 /* ArticleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		49725D9328F69AB400352928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49725D9528F69AB400352928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49725D9C28F69B1B00352928 /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewController.swift; sourceTree = "<group>"; };
+		49725D9F28FE67A300352928 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		49725DA228FE69F600352928 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		49DAB18028FE70F700301CA3 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
+		49DAB18328FE733C00301CA3 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,10 @@
 		49725D8628F69AB300352928 /* GoodNews */ = {
 			isa = PBXGroup;
 			children = (
+				49DAB18228FE732800301CA3 /* Cells */,
+				49DAB17F28FE70E100301CA3 /* ViewModels */,
+				49725DA128FE69EA00352928 /* Models */,
+				49725D9E28FE679700352928 /* Services */,
 				49725D9B28F69AF900352928 /* Controllers */,
 				49725D8728F69AB300352928 /* AppDelegate.swift */,
 				49725D8928F69AB300352928 /* SceneDelegate.swift */,
@@ -73,6 +85,38 @@
 				49725D9C28F69B1B00352928 /* NewsListTableViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49725D9E28FE679700352928 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				49725D9F28FE67A300352928 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		49725DA128FE69EA00352928 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				49725DA228FE69F600352928 /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		49DAB17F28FE70E100301CA3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				49DAB18028FE70F700301CA3 /* ArticleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		49DAB18228FE732800301CA3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				49DAB18328FE733C00301CA3 /* ArticleTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +192,11 @@
 			files = (
 				49725D8828F69AB300352928 /* AppDelegate.swift in Sources */,
 				49725D9D28F69B1B00352928 /* NewsListTableViewController.swift in Sources */,
+				49725DA028FE67A300352928 /* WebService.swift in Sources */,
+				49DAB18128FE70F700301CA3 /* ArticleViewModel.swift in Sources */,
 				49725D8A28F69AB300352928 /* SceneDelegate.swift in Sources */,
+				49DAB18428FE733C00301CA3 /* ArticleTableViewCell.swift in Sources */,
+				49725DA328FE69F600352928 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
