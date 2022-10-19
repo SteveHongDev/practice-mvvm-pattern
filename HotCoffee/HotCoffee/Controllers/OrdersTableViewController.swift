@@ -48,8 +48,12 @@ class OrdersTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath)
         
-        cell.textLabel?.text = vm.type
-        cell.detailTextLabel?.text = vm.size
+        var content = UIListContentConfiguration.cell()
+        
+        content.text = vm.type
+        content.secondaryText = vm.size
+        
+        cell.contentConfiguration = content
         
         return cell
     }

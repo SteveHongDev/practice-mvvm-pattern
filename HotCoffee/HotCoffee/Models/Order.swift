@@ -7,17 +7,17 @@
 
 import Foundation
 
-enum CoffeeType: String, Codable {
+enum CoffeeType: String, Codable, CaseIterable {
     case cappuccino
     case latte
     case espresso
     case cortado
 }
 
-enum CoffeeSize: String, Codable {
-    case small
-    case medium
-    case large
+enum CoffeeSize: String, Codable, CaseIterable {
+    case tall
+    case grande
+    case venti
 }
 
 struct Order: Codable {

@@ -70,15 +70,17 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4om-2f-hvl">
                                 <rect key="frame" x="0.0" y="91" width="390" height="422"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoffeeTypeTableViewCell" id="Gpr-Kx-ceF">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gpr-Kx-ceF" id="3RN-QX-vKC">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kBc-fU-lil">
-                                <rect key="frame" x="92" y="547" width="206" height="32"/>
-                                <segments>
-                                    <segment title="Small"/>
-                                    <segment title="Medium"/>
-                                    <segment title="Large"/>
-                                </segments>
-                            </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oYM-WM-1FG">
                                 <rect key="frame" x="95" y="648" width="200" height="34"/>
                                 <constraints>
@@ -99,22 +101,23 @@
                         <viewLayoutGuide key="safeArea" id="8jd-ay-H2U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kBc-fU-lil" firstAttribute="top" secondItem="4om-2f-hvl" secondAttribute="bottom" constant="34" id="06o-vG-eaH"/>
                             <constraint firstItem="4om-2f-hvl" firstAttribute="leading" secondItem="8jd-ay-H2U" secondAttribute="leading" id="3bv-Ip-QcV"/>
                             <constraint firstItem="4om-2f-hvl" firstAttribute="height" secondItem="tbV-9o-O4f" secondAttribute="height" multiplier="0.5" id="7lj-Tt-ih1"/>
-                            <constraint firstItem="kBc-fU-lil" firstAttribute="centerX" secondItem="tbV-9o-O4f" secondAttribute="centerX" id="DTS-wh-zZT"/>
                             <constraint firstItem="oYM-WM-1FG" firstAttribute="centerX" secondItem="tbV-9o-O4f" secondAttribute="centerX" id="DcB-50-OEh"/>
+                            <constraint firstItem="8jd-ay-H2U" firstAttribute="bottom" secondItem="xJL-IE-9eo" secondAttribute="bottom" constant="69" id="El8-Vr-l17"/>
                             <constraint firstItem="xJL-IE-9eo" firstAttribute="centerX" secondItem="tbV-9o-O4f" secondAttribute="centerX" id="FV6-Uj-gMw"/>
                             <constraint firstItem="4om-2f-hvl" firstAttribute="top" secondItem="8jd-ay-H2U" secondAttribute="top" id="Sx4-Bt-1Uu"/>
                             <constraint firstItem="xJL-IE-9eo" firstAttribute="top" secondItem="oYM-WM-1FG" secondAttribute="bottom" constant="25" id="bNh-nY-4oW"/>
                             <constraint firstItem="4om-2f-hvl" firstAttribute="width" secondItem="tbV-9o-O4f" secondAttribute="width" id="go1-Hk-Nlg"/>
-                            <constraint firstItem="oYM-WM-1FG" firstAttribute="top" secondItem="kBc-fU-lil" secondAttribute="bottom" constant="70" id="v7Y-ug-4SN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="5Na-DW-ysW">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="UsB-wN-EV6"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="9gN-Tv-KQn"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="4om-2f-hvl" id="Hcj-Hq-fm9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKB-Jv-swg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
