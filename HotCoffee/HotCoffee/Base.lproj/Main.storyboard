@@ -112,10 +112,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Order" id="5Na-DW-ysW">
-                        <barButtonItem key="leftBarButtonItem" title="Close" id="UsB-wN-EV6"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="9gN-Tv-KQn"/>
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="UsB-wN-EV6">
+                            <connections>
+                                <action selector="close" destination="mbg-08-94f" id="gCV-qK-lLZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="9gN-Tv-KQn">
+                            <connections>
+                                <action selector="save" destination="mbg-08-94f" id="7ag-jM-67S"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="emailTextField" destination="xJL-IE-9eo" id="5KR-wX-fuF"/>
+                        <outlet property="nameTextField" destination="oYM-WM-1FG" id="4A2-W9-b8l"/>
                         <outlet property="tableView" destination="4om-2f-hvl" id="Hcj-Hq-fm9"/>
                     </connections>
                 </viewController>
