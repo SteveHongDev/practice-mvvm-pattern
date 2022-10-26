@@ -56,7 +56,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="GoodWeather" id="U25-Ug-UvX">
-                        <barButtonItem key="leftBarButtonItem" title="Settings" id="F01-z9-OdN"/>
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="F01-z9-OdN">
+                            <connections>
+                                <segue destination="mLu-ss-HdQ" kind="presentation" identifier="SettingsTableViewController" id="H6O-2x-MLM"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="KbE-2c-9CV">
                             <connections>
                                 <segue destination="5Hm-6F-VKy" kind="presentation" identifier="AddWeatherCityViewController" id="j8E-3g-9zJ"/>
@@ -134,6 +138,41 @@
             </objects>
             <point key="canvasLocation" x="224.61538461538461" y="-5.6872037914691944"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="FfH-tR-tC4">
+            <objects>
+                <tableViewController id="n5h-xS-fWD" customClass="SettingsTableViewController" customModule="GoodWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Esb-C3-P5g">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsCell" id="LSw-eh-uUb">
+                                <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LSw-eh-uUb" id="Dk8-dN-8oc">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="n5h-xS-fWD" id="G08-ds-Owy"/>
+                            <outlet property="delegate" destination="n5h-xS-fWD" id="Uw9-4K-M27"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="7gu-jx-aDp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NP8-KY-FgD">
+                            <connections>
+                                <action selector="done" destination="n5h-xS-fWD" id="3YU-0n-6wt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PB3-zo-ysk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2960" y="-702.36966824644549"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NG9-Gj-273">
             <objects>
@@ -151,6 +190,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwe-RC-Sco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2030.7692307692307" y="-6.3981042654028437"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qB9-Pr-kih">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="mLu-ss-HdQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uto-1q-7oj">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="n5h-xS-fWD" kind="relationship" relationship="rootViewController" id="CLV-J1-tSP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kW3-bA-aFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2030.7692307692307" y="-702.36966824644549"/>
         </scene>
     </scenes>
     <resources>
